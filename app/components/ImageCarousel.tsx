@@ -1,7 +1,8 @@
 import { Box } from "@chakra-ui/react";
 import Image from "next/image";
 import Slider from "react-slick";
-import './imageCarousel.css'
+import "./imageCarousel.css";
+import getCarouselImages from "../api/getCarouselImage";
 
 const ImageCarousel = () => {
   const settings = {
@@ -13,58 +14,21 @@ const ImageCarousel = () => {
     autoplay: true, // Habilita autoplay
     autoplaySpeed: 4000, // Tempo de transição entre os slides
   };
+  const images = getCarouselImages();
 
   return (
     <Box width="100%" mx="auto">
       <Slider {...settings}>
-        <Box height={["300px"]} position="relative">
-          <Image
-            src="/images/carousel/1.jpg"
-            alt="Imagem 1"
-            layout="fill"
-            objectFit="cover"
-          />
-        </Box>
-        <Box height={["300px"]} position="relative">
-          <Image
-            src="/images/carousel/2.jpg"
-            alt="Imagem 2"
-            layout="fill"
-            objectFit="cover"
-          />
-        </Box>
-        <Box height={["300px"]} position="relative">
-          <Image
-            src="/images/carousel/3.jpg"
-            alt="Imagem 3"
-            layout="fill"
-            objectFit="cover"
-          />
-        </Box>
-        <Box height={["300px"]} position="relative">
-          <Image
-            src="/images/carousel/4.jpg"
-            alt="Imagem 4"
-            layout="fill"
-            objectFit="cover"
-          />
-        </Box>
-        <Box height={["300px"]} position="relative">
-          <Image
-            src="/images/carousel/5.jpg"
-            alt="Imagem 5"
-            layout="fill"
-            objectFit="cover"
-          />
-        </Box>
-        <Box height={["300px"]} position="relative">
-          <Image
-            src="/images/carousel/6.jpg"
-            alt="Imagem 6"
-            layout="fill"
-            objectFit="cover"
-          />
-        </Box>
+        {images?.map((image, index) => (
+          <Box height={["300px"]} key={index} position="relative">
+            <Image
+              src={image.path}
+              alt={image.name}
+              layout="fill"
+              objectFit="cover"
+            />
+          </Box>
+        ))}
       </Slider>
     </Box>
   );

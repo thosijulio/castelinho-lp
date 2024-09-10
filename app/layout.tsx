@@ -3,6 +3,7 @@ import { Poppins } from "next/font/google";
 import { Providers } from "./Providers";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "/app/styles/global.css";
 
 const inter = Poppins({ subsets: ["latin"], weight: "400" });
 

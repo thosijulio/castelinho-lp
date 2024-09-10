@@ -1,0 +1,7 @@
+@font-face {
+  font-family: 'Copyduck';
+  src: url('/fonts/Copyduck.woff2') format('woff2'),
+    url('/fonts/Copyduck.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}

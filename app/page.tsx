@@ -1,7 +1,9 @@
 "use client";
 import { Flex } from "@chakra-ui/react";
 import Header from "./components/Header";
-import ImageCarousel from "./components/ImageCarousel";
+import Banner from "./components/Banner";
+import AboutUs from "./components/AboutUs";
+import WhatsappButton from "./components/WhatsappButton";
 
 export default function Home() {
   return (
@@ -11,13 +13,13 @@ export default function Home() {
       maxWidth="100dvw"
       minHeight="100dvh"
       minWidth="100dvw"
-      overflow="hidden"
       textAlign="center"
+      position="relative"
     >
       <Header />
-      <Flex marginTop={["50px"]} width="100%">
-        <ImageCarousel />
-      </Flex>
+      <Banner />
+      <AboutUs />
+      <WhatsappButton />
     </Flex>
   );
 }

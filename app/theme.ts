@@ -1,6 +1,9 @@
 import { extendTheme } from "@chakra-ui/react";
 
 const theme = extendTheme({
+  fonts: {
+    heading: "Copyduck, sans-serif", // Usado para cabeçalhos
+  },
   breakpoints: {
     sm: "280px",
     md: "300px",
@@ -17,7 +20,8 @@ const theme = extendTheme({
         boxSizing: "border-box",
       },
       body: {
-        backgroundColor: "#090c24",
+        backgroundColor: "#f3f3f3",
+        color: "#7e7d95",
         margin: 0,
       },
     },
