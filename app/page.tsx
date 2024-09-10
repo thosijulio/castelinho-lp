@@ -13,7 +13,6 @@ export default function Home() {
       direction="column"
       maxWidth="50vw !important"
       minHeight="100dvh"
-      maxH={["100dvw"]}
       minWidth="100%"
       textAlign="center"
       overflowX="hidden"
