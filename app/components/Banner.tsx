@@ -12,11 +12,11 @@ const Banner = () => {
       backgroundPosition="center"
       flexDirection="column"
       fontFamily="Copyduck"
-      lineHeight="40px"
       fontSize={["24px", "60px"]}
       height={["200px", "600px"]}
       justifyContent="center"
-      width={["100dvw"]}
+      overflowX="hidden"
+      width={["100%"]}
     >
       <AnimatedText text={"Castelinho do Saber"} />
     </Flex>

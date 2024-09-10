@@ -36,27 +36,25 @@ const AnimatedText = ({ text }: { text: string }) => {
   };
 
   return (
-    <>
-      <motion.div variants={container} initial="hidden" animate="visible">
-        {letters.map((letter, index) => (
-          <MotionSpan
-            key={index}
-            custom={index}
-            style={{
-              color: colors[index],
-              margin: "3px",
-              textShadow: `2px 2px 0 #FFFFFF, -2px -2px 0 #FFFFFF, 2px -2px 0 #FFFFFF, -2px 2px 0 #FFFFFF`,
-              display: "inline-block", // Garante que cada letra seja tratada como bloco
-            }}
-            variants={child} // Variantes de animação para cada letra
-          >
-            {letter === " "
-              ? "\u00A0" /* HTML entity for non-breaking space */
-              : letter}
-          </MotionSpan>
-        ))}
-      </motion.div>
-    </>
+    <motion.div variants={container} initial="hidden" animate="visible">
+      {letters.map((letter, index) => (
+        <MotionSpan
+          key={index}
+          custom={index}
+          style={{
+            color: colors[index],
+            margin: "3px",
+            textShadow: `2px 2px 0 #FFFFFF, -2px -2px 0 #FFFFFF, 2px -2px 0 #FFFFFF, -2px 2px 0 #FFFFFF`,
+            display: "inline-block", // Garante que cada letra seja tratada como bloco
+          }}
+          variants={child} // Variantes de animação para cada letra
+        >
+          {letter === " "
+            ? "\u00A0" /* HTML entity for non-breaking space */
+            : letter}
+        </MotionSpan>
+      ))}
+    </motion.div>
   );
 };
 

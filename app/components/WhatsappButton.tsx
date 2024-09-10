@@ -15,7 +15,7 @@ const WhatsappButton = () => {
         backgroundSize="cover"
         height="50px"
         width="50px"
-        position="absolute"
+        position="fixed"
         bottom={5}
         right={5}
         cursor="pointer" // Adiciona um cursor de ponteiro para indicar que o elemento é clicável

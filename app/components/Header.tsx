@@ -12,7 +12,8 @@ const Header = () => {
       justify="space-between"
       padding={["30px 25px 0 25px"]}
       position="absolute"
-      width="100%"
+      overflow="hidden"
+      width="90%"
     >
       <Flex position="relative" height={["70px"]} width={["70px"]}>
         <Image src="/logo.png" alt="logo" layout="fill" objectFit="contain" />

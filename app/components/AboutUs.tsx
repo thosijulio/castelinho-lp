@@ -7,13 +7,14 @@ const AboutUs = () => {
       direction="column"
       gap={["40px"]}
       justify="center"
-      width="100dvw"
+      overflow="hidden"
+      width="100%"
     >
       <Flex
         align="center"
         bgColor="#c583fc"
-        borderBottomLeftRadius="300%"
-        borderBottomRightRadius="300%"
+        borderBottomLeftRadius="100%"
+        borderBottomRightRadius="200%"
         height={["100px"]}
         justify="center"
         width="100%"
