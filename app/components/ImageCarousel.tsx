@@ -1,5 +1,4 @@
-import { Box } from "@chakra-ui/react";
-import Image from "next/image";
+import { Box, Image } from "@chakra-ui/react";
 import Slider from "react-slick";
 import "./imageCarousel.css";
 import getCarouselImages from "../api/getCarouselImage";
@@ -17,16 +16,17 @@ const ImageCarousel = () => {
   const images = getCarouselImages();
 
   return (
-    <Box width="100%" mx="auto">
+    <Box
+      backgroundColor="blue !important"
+      mx="auto"
+      height={["200px"]}
+      textAlign="center"
+      width={["400px"]}
+    >
       <Slider {...settings}>
         {images?.map((image, index) => (
-          <Box height={["300px"]} key={index} position="relative">
-            <Image
-              src={image.path}
-              alt={image.name}
-              layout="fill"
-              objectFit="cover"
-            />
+          <Box key={index}>
+            <Image src={image.path} alt={image.name} />
           </Box>
         ))}
       </Slider>

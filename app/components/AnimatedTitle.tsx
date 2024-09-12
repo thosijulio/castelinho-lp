@@ -4,7 +4,7 @@ import getRandomColor from "../utils/getRandomColor";
 import { useEffect, useState } from "react";
 const MotionSpan = motion.span;
 
-const AnimatedText = ({ text }: { text: string }) => {
+const AnimatedTitle = ({ text }: { text: string }) => {
   const letters = text.split("");
   const [colors, setColors] = useState<string[]>([]);
 
@@ -58,4 +58,4 @@ const AnimatedText = ({ text }: { text: string }) => {
   );
 };
 
-export default AnimatedText;
+export default AnimatedTitle;
