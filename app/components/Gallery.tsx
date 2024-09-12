@@ -29,7 +29,7 @@ const Gallery = () => {
           Galeria
         </Text>
       </Flex>
-      <ImageCarousel />
+      {/* <ImageCarousel /> */}
     </Flex>
   );
 };
